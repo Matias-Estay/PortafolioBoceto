@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
+// Obtener Usuario
+Route::get('/usuario',[UsuarioController::class, 'obtener_usuario']);
+//Ruta falsa para post
+Route::post('/test', 'UsuarioController@post_test');
+//Ruta falsa para get
+Route::get('/test_get', 'UsuarioController@get_test');
+Route::post('/cambiar_pass', 'Auth\ResetPasswordController@updatePassword');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/inicio', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

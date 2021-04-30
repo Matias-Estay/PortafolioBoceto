@@ -1,7 +1,7 @@
 @extends('layouts.app')
 <style scoped>
 body {
-   background: url('/images/Primera_Slide.jpg');
+   background: url('/Imagenes/fondo.gif');
    background-size: cover;
    display:flex; 
     flex-direction:column; 

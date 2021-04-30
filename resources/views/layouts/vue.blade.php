@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}" />
-        <title>App JRI</title>	
+        <title>Matías Estay</title>	
     </head>
     <body class="h-100 w-100">
         <div id='app' class="h-100 w-100">

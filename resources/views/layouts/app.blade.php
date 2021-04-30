@@ -8,11 +8,13 @@
 	<!-- CSRF Token -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
-	<title>App JRI</title>
+	<title>Matías Estay</title>
 	<script src="{{ asset('js/app.js') }}" defer></script>
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
@@ -45,15 +47,30 @@
 					<li class="nav-item">
 						<a class="nav-link active" href="{{ url('/inicio') }}">Inicio</a>
 					</li>
+					<li class="nav-item dropdown">
+						<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+							{{ Auth::user()->name }} <span class="caret"></span>
+						</a>
+
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="{{ route('logout') }}"
+							   onclick="event.preventDefault();
+											 document.getElementById('logout-form').submit();">
+								{{ __('Logout') }}</a>
+
+							<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+								@csrf
+							</form>
+						</div>
+					</li>
 					@else
 					<li class="nav-item">
 						<a class="nav-link" href="{{ route('login') }}">Ingresar</a>
 					</li>
 					@if (Route::has('register'))
-						@if (0 > 1)<li class="nav-item">
+						<li class="nav-item">
 							<a class="nav-link" href="{{ route('register') }}">Registrarse</a>
 						</li>
-						@endif
 					@endif
 					@endauth
 					@endif
