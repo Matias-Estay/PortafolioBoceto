@@ -28,19 +28,6 @@
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					{{-- @if (0 > 1) --}}
-					<li class="nav-item dropdown active">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Formularios
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="/formularios/FHT">Ficha VT</a>
-						</div>
-					</li>
-					{{-- @endif --}}
-				</ul>
 				<ul class="navbar-nav ml-auto">
 					@if (Route::has('login'))
 					@auth

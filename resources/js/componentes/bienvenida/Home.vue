@@ -1,7 +1,7 @@
 <template>
 	<section class="w-100 h-100">
 		<article class="h-75 p-5">
-			<img src="/Imagenes/logo_vue.png" style="height:125px; width:140px; position: absolute; margin-top:25%" class="image-fluid"/>
+			<img src="/Imagenes/logo_vue.png" style="height:200px; width:375px; position: absolute; margin-top:18%; margin-left:37%" class="image-fluid"/>
 		</article>
 		
 		<footer class="pl-5 pr-5">
@@ -35,7 +35,7 @@
 								<b-list-group>
 									<b-list-group-item>
 										<font-awesome-icon icon="map-marker-alt"/>
-										Dirección: Luis Uribe 2343, Ñuñoa, Santiago.
+											Francisco de Villagra 127, Ñuñoa.
 									</b-list-group-item>
 								</b-list-group>
 							</div>

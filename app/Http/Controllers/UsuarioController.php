@@ -27,7 +27,7 @@ class UsuarioController extends Controller
 	{
 		$user = Auth::user();
 		
-		$datos = DB::select("SELECT u.id, u.email
+		$datos = DB::select("SELECT u.id, u.email, u.name
 			FROM users as u
 			where u.email = '" . $user->email . "';");
 

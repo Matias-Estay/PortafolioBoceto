@@ -1,6 +1,6 @@
 <template>      
     <article class="d-flex min- h-100">
-        <div class="card  my-auto mx-auto" style="width: 500px">
+        <div class="card  my-auto mx-auto" style="width: 500px; opacity: 0.89;">
             <div class="card-header bg-dark">
                 <h3 class="text-white">Registro</h3>
             </div>
